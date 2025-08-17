@@ -1,2 +1,2 @@
 # neura-match
-An AI-informed dating app for personalized matches.
+(IN PROGRESS) An AI-informed dating app for personalized matches.
