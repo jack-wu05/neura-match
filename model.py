@@ -1,11 +1,11 @@
 from sentence_transformers import SentenceTransformer
 from sklearn.metrics.pairwise import cosine_similarity
 import numpy as np
+from database import get_all_users
 
 model = SentenceTransformer("all-MiniLM-L6-v2")
 
-##TODO: create sqlite3 DB connection to import user_bios in forms [name:bios]
-user_bios = {}
+user_bios = get_all_users()
 
 names = list(user_bios.keys())
 bios = list(user_bios.values())
@@ -24,4 +24,4 @@ def show_matches(name, top_n=3):
         print(f"{n}: {s}")
 
 for n in names:
-    show_matches(n)
+    show_matches(n)        
